@@ -13,6 +13,13 @@ intents:
   - ask_reading_structure
   - ask_exam_tips
   - ask_score_info
+  - ask_part_1
+  - ask_part_2
+  - ask_part_3
+  - ask_part_4
+  - ask_part_5
+  - ask_part_6
+  - ask_part_7
 
 actions: 
   - action_send_exam
@@ -20,6 +27,13 @@ actions:
   - action_ask_reading_structure
   - action_ask_exam_tips
   - action_ask_score_info
+  - action_part_1_info
+  - action_part_2_info
+  - action_part_3_info
+  - action_part_4_info
+  - action_part_5_info
+  - action_part_6_info
+  - action_part_7_info
 
 responses:
   utter_greet:

@@ -120,7 +120,7 @@ class ActionAskScoreInfo(Action):
                 "8. **Retaking the Test**: If you are not satisfied with your score, you can retake the TOEIC test. Many people see score improvements with additional study and practice.\n"
                 "9. **Impact on Career**: TOEIC scores are often used by employers to assess English proficiency. A higher score can enhance your job prospects and career opportunities.\n"
                 "10. **University Requirements**: Some universities require a minimum TOEIC score for admission. Check with the specific institution for their requirements.\n",
-                f"For more study materials and practice tests, you can visit our website at [{_domain}/test/toeic-test-full-test/]({_domain}/test/toeic-test-full-test/). Happy studying!"
+                f"For more study materials and practice tests, you can visit our website at [{_domain}/en/test/toeic-test-full-test/]({_domain}/test/toeic-test-full-test/). Happy studying!"
             ))
         else: 
             dispatcher.utter_message(text=(
@@ -139,21 +139,149 @@ class ActionAskScoreInfo(Action):
             ))
         return []
 
-# class ActionAskScoreInfo(Action):
+class ActionPart1Info(Action):
 
-#     def name(self) -> Text:
-#         return "action_ask_score_info"
+    def name(self) -> Text:
+        return "action_part_1_info"
 
-#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict) -> Coroutine[Any, Any, List[Dict[str, Any]]]:
-#         dataJson = tracker.sender_id
-#         data = json.loads(dataJson)
-#         language = data["language"]
-#         if(language == "en"):
-#             dispatcher.utter_message(text=(
-                
-#             ))
-#         else: 
-#             dispatcher.utter_message(text=(
-                
-#             ))
-#         return []
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict) -> Coroutine[Any, Any, List[Dict[str, Any]]]:
+        dataJson = tracker.sender_id
+        data = json.loads(dataJson)
+        language = data["language"]
+        _domain = data["domain"]
+        
+        if(language == "en"):
+            dispatcher.utter_message(text=(
+                f"Part 1 of the TOEIC test assesses your ability to listen in Toeic. You can practice at <a href='{_domain}/practice/toeic-practice-part-1-photos/' target='_blank'>{_domain}/practice/toeic-practice-part-1-photos/</a>."
+            ))
+        else: 
+            dispatcher.utter_message(text=(
+                f"Phần 1 của bài thi TOEIC kiểm tra kỹ năng Nghe trong bài thi TOEIC. Bạn có thể luyện tập tại <a href='{_domain}/practice/toeic-practice-part-1-photos/' target='_blank'>{_domain}/practice/toeic-practice-part-1-photos/</a>."
+            ))
+        return []
+
+class ActionPart2Info(Action):
+
+    def name(self) -> Text:
+        return "action_part_2_info"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict) -> Coroutine[Any, Any, List[Dict[str, Any]]]:
+        dataJson = tracker.sender_id
+        data = json.loads(dataJson)
+        language = data["language"]
+        _domain = data["domain"]
+        
+        if(language == "en"):
+            dispatcher.utter_message(text=(
+                f"Part 2 of the TOEIC test assesses your ability to listen in Toeic. You can practice at <a href='{_domain}/practice/toeic-practice-part-2-question-response/' target='_blank'>{_domain}/practice/toeic-practice-part-2-question-response/</a>."
+            ))
+        else: 
+            dispatcher.utter_message(text=(
+                f"Phần 2 của bài thi TOEIC kiểm tra kỹ năng Nghe trong bài thi TOEIC. Bạn có thể luyện tập tại <a href='{_domain}/practice/toeic-practice-part-2-question-response/' target='_blank'>{_domain}/practice/toeic-practice-part-2-question-response/</a>."
+            ))
+        return []
+
+class ActionPart3Info(Action):
+
+    def name(self) -> Text:
+        return "action_part_3_info"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict) -> Coroutine[Any, Any, List[Dict[str, Any]]]:
+        dataJson = tracker.sender_id
+        data = json.loads(dataJson)
+        language = data["language"]
+        _domain = data["domain"]
+        
+        if(language == "en"):
+            dispatcher.utter_message(text=(
+                f"Part 3 of the TOEIC test assesses your ability to listen in Toeic. You can practice at <a href='{_domain}/practice/toeic-practice-part-3-conversations/' target='_blank'>{_domain}/practice/toeic-practice-part-3-conversations/</a>."
+            ))
+        else: 
+            dispatcher.utter_message(text=(
+                f"Phần 3 của bài thi TOEIC kiểm tra kỹ năng Nghe trong bài thi TOEIC. Bạn có thể luyện tập tại <a href='{_domain}/practice/toeic-practice-part-3-conversations/' target='_blank'>{_domain}/practice/toeic-practice-part-3-conversations/</a>."
+            ))
+        return []
+
+class ActionPart4Info(Action):
+
+    def name(self) -> Text:
+        return "action_part_4_info"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict) -> Coroutine[Any, Any, List[Dict[str, Any]]]:
+        dataJson = tracker.sender_id
+        data = json.loads(dataJson)
+        language = data["language"]
+        _domain = data["domain"]
+        
+        if(language == "en"):
+            dispatcher.utter_message(text=(
+                f"Part 4 of the TOEIC test assesses your ability to listen in Toeic. You can practice at <a href='{_domain}/practice/toeic-practice-part-4-short-talks/' target='_blank'>{_domain}/practice/toeic-practice-part-4-short-talks/</a>."
+            ))
+        else: 
+            dispatcher.utter_message(text=(
+                f"Phần 4 của bài thi TOEIC kiểm tra kỹ năng Nghe trong bài thi TOEIC. Bạn có thể luyện tập tại <a href='{_domain}/practice/toeic-practice-part-4-short-talks/' target='_blank'>{_domain}/practice/toeic-practice-part-4-short-talks/</a>."
+            ))
+        return []
+
+class ActionPart5Info(Action):
+
+    def name(self) -> Text:
+        return "action_part_5_info"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict) -> Coroutine[Any, Any, List[Dict[str, Any]]]:
+        dataJson = tracker.sender_id
+        data = json.loads(dataJson)
+        language = data["language"]
+        _domain = data["domain"]
+        
+        if(language == "en"):
+            dispatcher.utter_message(text=(
+                f"Part 5 of the TOEIC test assesses your ability to reading in Toeic. You can practice at <a href='{_domain}/practice/toeic-practice-part-5-incomplete-sentences' target='_blank'>{_domain}/practice/toeic-practice-part-5-incomplete-sentences</a>."
+            ))
+        else: 
+            dispatcher.utter_message(text=(
+                f"Phần 5 của bài thi TOEIC kiểm tra kỹ năng Đọc trong bài thi TOEIC. Bạn có thể luyện tập tại <a href='{_domain}/practice/toeic-practice-part-5-incomplete-sentences' target='_blank'>{_domain}/practice/toeic-practice-part-5-incomplete-sentences</a>."
+            ))
+        return []
+    
+class ActionPart6Info(Action):
+
+    def name(self) -> Text:
+        return "action_part_6_info"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict) -> Coroutine[Any, Any, List[Dict[str, Any]]]:
+        dataJson = tracker.sender_id
+        data = json.loads(dataJson)
+        language = data["language"]
+        _domain = data["domain"]
+        
+        if(language == "en"):
+            dispatcher.utter_message(text=(
+                f"Part 6 of the TOEIC test assesses your ability to reading in Toeic. You can practice at <a href='{_domain}/practice/toeic-practice-part-6-text-completion' target='_blank'>{_domain}/practice/toeic-practice-part-6-text-completion</a>."
+            ))
+        else: 
+            dispatcher.utter_message(text=(
+                f"Phần 6 của bài thi TOEIC kiểm tra kỹ năng Đọc trong bài thi TOEIC. Bạn có thể luyện tập tại <a href='{_domain}/practice/toeic-practice-part-6-text-completion' target='_blank'>{_domain}/practice/toeic-practice-part-6-text-completion</a>."
+            ))
+        return []
+    
+class ActionPart7Info(Action):
+
+    def name(self) -> Text:
+        return "action_part_7_info"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict) -> Coroutine[Any, Any, List[Dict[str, Any]]]:
+        dataJson = tracker.sender_id
+        data = json.loads(dataJson)
+        language = data["language"]
+        _domain = data["domain"]
+        
+        if(language == "en"):
+            dispatcher.utter_message(text=(
+                f"Part 7 of the TOEIC test assesses your ability to reading in Toeic. You can practice at <a href='{_domain}/practice/toeic-practice-part-7-single-passages' target='_blank'>{_domain}/practice/toeic-practice-part-7-single-passages</a>."
+            ))
+        else: 
+            dispatcher.utter_message(text=(
+                f"Phần 7 của bài thi TOEIC kiểm tra kỹ năng Đọc trong bài thi TOEIC. Bạn có thể luyện tập tại <a href='{_domain}/practice/toeic-practice-part-7-single-passages' target='_blank'>{_domain}/practice/toeic-practice-part-7-single-passages</a>."
+            ))
+        return []

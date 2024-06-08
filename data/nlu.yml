@@ -214,7 +214,7 @@ nlu:
     - Kỳ thi TOEIC phần 1 kiểm tra những gì?
     - Làm thế nào để luyện tập cho Phần 1 của kỳ thi TOEIC?
 
-- intent: ask_part_1
+- intent: ask_part_2
   examples: |
     - What is Part 2 of the TOEIC exam?
     - Explain Part 2 of the TOEIC test
@@ -228,3 +228,76 @@ nlu:
     - Bạn có thể cung cấp thông tin chi tiết về Phần 2 được không?
     - Làm thế nào để chuẩn bị cho Phần 2 của bài thi TOEIC?
     - Nơi nào có thể tìm thấy tài liệu luyện tập cho Phần 2?
+
+- intent: ask_part_3
+  examples: |
+    - Please explain Part 3 of the TOEIC
+    - What does Part 3 of the TOEIC test?
+    - Can you tell me about Part 3?
+    - Details on Part 3 of the TOEIC exam
+    - How can I practice for Part 3 of the TOEIC?
+    - Xin giải thích về Phần 3 của bài thi TOEIC
+    - Phần 3 của bài thi TOEIC kiểm tra những gì?
+    - Hãy cho tôi biết về Phần 3 được không?
+    - Thông tin chi tiết về Phần 3 của bài thi TOEIC
+    - Làm thế nào để luyện tập cho Phần 3 của kỳ thi TOEIC?
+
+- intent: ask_part_4
+  examples: |
+    - What does Part 4 of the TOEIC involve?
+    - Explain Part 4 of the TOEIC exam
+    - Tell me about Part 4 please
+    - Information on Part 4 of the TOEIC test
+    - How to practice for Part 4 of the TOEIC?
+    - Where can I find resources for Part 4?
+    - Phần 4 của bài thi TOEIC bao gồm những gì vậy?
+    - Hãy giải thích về Phần 4 của bài thi TOEIC
+    - Cho tôi biết về Phần 4 được không?
+    - Thông tin về Phần 4 của kỳ thi TOEIC
+    - Làm thế nào để luyện tập cho Phần 4 của bài thi TOEIC?
+    - Nơi nào có thể tìm thấy tài liệu học tập cho Phần 4?
+
+- intent: ask_part_5
+  examples: |
+    - Explain Part 5 of the TOEIC test
+    - What is covered in Part 5 of the TOEIC exam?
+    - Can you provide information on Part 5?
+    - Details about Part 5 please
+    - How to prepare for Part 5 of the TOEIC?
+    - Where can I find practice tests for Part 5?
+    - Hãy giải thích về Phần 5 của bài thi TOEIC
+    - Phần 5 của bài thi TOEIC bao gồm những gì?
+    - Cho tôi biết về Phần 5 được không?
+    - Thông tin chi tiết về Phần 5 của bài thi TOEIC
+    - Làm thế nào để chuẩn bị cho Phần 5 của kỳ thi TOEIC?
+    - Nơi nào có thể tìm thấy các bài kiểm tra luyện tập cho Phần 5?
+
+- intent: ask_part_6
+  examples: |
+    - Tell me more about Part 6 of the TOEIC test
+    - What does Part 6 of the TOEIC involve?
+    - Explain Part 6 to me please
+    - Can you provide details on Part 6?
+    - How can I practice for Part 6 of the TOEIC?
+    - Where can I find study materials for Part 6?
+    - Xin hãy giải thích về Phần 6 của bài thi TOEIC
+    - Phần 6 của bài thi TOEIC kiểm tra những gì?
+    - Hãy cho tôi biết về Phần 6 được không?
+    - Thông tin chi tiết về Phần 6 của bài thi TOEIC
+    - Làm thế nào để luyện tập cho Phần 6 của kỳ thi TOEIC?
+    - Nơi nào có thể tìm thấy tài liệu học tập cho Phần 6?
+
+- intent: ask_part_7
+  examples: |
+    - What is Part 7 of the TOEIC exam?
+    - Explain Part 7 of the TOEIC test
+    - Tell me about Part 7 please
+    - Information on Part 7 of the TOEIC exam
+    - How to prepare for Part 7 of the TOEIC?
+    - Where can I find practice resources for Part 7?
+    - Phần 7 của bài thi TOEIC là gì vậy?
+    - Hãy giải thích về Phần 7 của bài thi TOEIC
+    - Cho tôi biết về Phần 7 được không?
+    - Thông tin về Phần 7 của kỳ thi TOEIC
+    - Làm thế nào để luyện tập cho Phần 7 của bài thi TOEIC?
+    - Nơi nào có thể tìm thấy tài liệu luyện tập cho Phần 7?

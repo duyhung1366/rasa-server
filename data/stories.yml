@@ -27,6 +27,41 @@ stories:
   - intent: ask_score_info
   - action: action_ask_score_info
 
+- story: ask part 1
+  steps:
+  - intent: ask_part_1
+  - action: action_part_1_info
+  
+- story: ask part 2
+  steps:
+  - intent: ask_part_2
+  - action: action_part_2_info
+
+- story: ask part 3
+  steps:
+  - intent: ask_part_3
+  - action: action_part_3_info
+
+- story: ask part 4
+  steps:
+  - intent: ask_part_4
+  - action: action_part_4_info
+
+- story: ask part 5
+  steps:
+  - intent: ask_part_5
+  - action: action_part_5_info
+
+- story: ask part 6
+  steps:
+  - intent: ask_part_6
+  - action: action_part_6_info
+
+- story: ask part 7
+  steps:
+  - intent: ask_part_7
+  - action: action_part_7_info
+
 - story: happy path
   steps:
   - intent: greet

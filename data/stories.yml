@@ -1,0 +1,55 @@
+version: "3.1"
+
+stories:
+
+- story: greet and ask about exam structure
+  steps:
+  - intent: send_exam
+  - action: action_send_exam
+  
+- story: ask about listening structure
+  steps:
+  - intent: intent_listening_exam
+  - action: action_listening_exam
+
+- story: ask about reading structure
+  steps:
+  - intent: ask_reading_structure
+  - action: action_ask_reading_structure
+
+- story: ask exam tips
+  steps:
+  - intent: ask_exam_tips
+  - action: action_ask_exam_tips
+
+- story: ask score info
+  steps:
+  - intent: ask_score_info
+  - action: action_ask_score_info
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

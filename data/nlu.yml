@@ -1,0 +1,230 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    
+- intent: send_exam
+  examples: |
+    - Cấu trúc đề thi TOEIC như thế nào?
+    - Đề thi TOEIC gồm những phần nào?
+    - TOEIC có bao nhiêu phần?
+    - Bài thi TOEIC được chia làm mấy phần?
+    - Đề thi TOEIC có những phần gì?
+    - Mỗi phần thi TOEIC có bao nhiêu câu hỏi?
+    - Listening và Reading trong TOEIC có gì khác nhau?
+    - Thời gian làm bài TOEIC là bao lâu?
+    - Phần thi Listening trong TOEIC kéo dài bao lâu?
+    - Phần thi Reading trong TOEIC kéo dài bao lâu?
+    - What is the structure of the TOEIC test?
+    - What are the sections of the TOEIC test?
+    - How many sections are there in the TOEIC test?
+    - How many parts is the TOEIC test divided into?
+    - What parts does the TOEIC test consist of?
+    - How many questions are there in each section of the TOEIC test?
+    - What is the difference between Listening and Reading in the TOEIC test?
+    - How long is the duration of the TOEIC test?
+    - How long does the Listening section of the TOEIC test last?
+    - How long does the Reading section of the TOEIC test last?
+
+- intent: intent_listening_exam
+  examples: |
+    - Phần Listening trong TOEIC như thế nào?
+    - Listening TOEIC có mấy phần?
+    - Listening có bao nhiêu câu hỏi?
+    - What is the Listening section in the TOEIC test like?
+    - How many parts are there in the TOEIC Listening section?
+    - How many questions are there in the Listening section?
+
+- intent: ask_reading_structure
+  examples: |
+    - Phần Reading trong TOEIC như thế nào?
+    - Reading TOEIC có mấy phần?
+    - Reading có bao nhiêu câu hỏi?
+    - What is the Reading section in the TOEIC test like?
+    - How many parts are there in the TOEIC Reading section?
+    - How many questions are there in the Reading section?
+
+- intent: ask_exam_tips
+  examples: |
+    - Bạn có mẹo nào để làm bài thi TOEIC không?
+    - Có cách nào để làm bài thi tốt hơn không?
+    - Cho tôi vài mẹo làm bài thi TOEIC.
+    - Làm thế nào để đạt điểm cao trong TOEIC?
+    - Có mẹo nào để cải thiện điểm số TOEIC không?
+    - Làm sao để tăng cường kỹ năng nghe cho TOEIC?
+    - Bạn có lời khuyên nào cho phần thi Reading không?
+    - Mẹo làm bài thi Listening là gì?
+    - Có cách nào để làm phần Reading nhanh hơn không?
+    - Làm thế nào để tránh bị mất điểm trong bài thi TOEIC?
+    - Tôi nên luyện tập như thế nào để thi TOEIC hiệu quả?
+    - Có mẹo gì để giảm căng thẳng khi thi TOEIC không?
+    - Tôi nên chú ý gì khi làm bài thi TOEIC?
+    - Bạn có chiến lược nào cho phần thi Listening và Reading không?
+    - Cách nào để cải thiện vốn từ vựng cho TOEIC?
+    - Làm thế nào để quản lý thời gian trong khi thi TOEIC?
+    - Do you have any tips for taking the TOEIC test?
+    - Is there any way to perform better on the test?
+    - Give me some tips for taking the TOEIC test.
+    - How can I score high on the TOEIC test?
+    - Are there any tips to improve my TOEIC score?
+    - How can I enhance my listening skills for the TOEIC test?
+    - Do you have any advice for the Reading section?
+    - What are the tips for the Listening section?
+    - Is there any way to do the Reading section faster?
+    - How can I avoid losing points on the TOEIC test?
+    - How should I practice effectively for the TOEIC test?
+    - Are there any tips to reduce stress during the TOEIC test?
+    - What should I pay attention to when taking the TOEIC test?
+    - Do you have any strategies for the Listening and Reading sections?
+    - How can I improve my vocabulary for the TOEIC test?
+    - How can I manage my time during the TOEIC test?
+
+- intent: ask_score_info
+  examples: |
+    - Điểm TOEIC được tính như thế nào?
+    - Làm thế nào để biết điểm TOEIC của tôi?
+    - Thang điểm TOEIC là gì?
+    - Bao nhiêu điểm là đủ để đạt TOEIC?
+    - Điểm tối đa của TOEIC là bao nhiêu?
+    - Điểm TOEIC có giá trị trong bao lâu?
+    - Có bao nhiêu loại điểm trong bài thi TOEIC?
+    - Điểm TOEIC được chia như thế nào?
+    - Tôi cần bao nhiêu điểm TOEIC để đạt loại khá?
+    - Điểm trung bình của bài thi TOEIC là bao nhiêu?
+    - Tôi cần đạt bao nhiêu điểm TOEIC để thi vào trường đại học?
+    - Làm sao để cải thiện điểm số TOEIC của tôi?
+    - Điểm TOEIC có ảnh hưởng đến công việc của tôi không?
+    - Tôi nên thi lại nếu điểm TOEIC của tôi thấp không?
+    - Điểm TOEIC của tôi có thể cải thiện nếu tôi học thêm không?
+    - How is the TOEIC score calculated?
+    - How can I find out my TOEIC score?
+    - What is the TOEIC scoring scale?
+    - How many points are needed to pass the TOEIC test?
+    - What is the maximum TOEIC score?
+    - How long is the TOEIC score valid?
+    - How many types of scores are there in the TOEIC test?
+    - How is the TOEIC score divided?
+    - How many TOEIC points do I need to get a good grade?
+    - What is the average TOEIC score?
+    - How many TOEIC points do I need to get into university?
+    - How can I improve my TOEIC score?
+    - Does the TOEIC score affect my job?
+    - Should I retake the TOEIC if my score is low?
+    - Can my TOEIC score improve if I study more?
+
+- intent: ask_part_1
+  examples: |
+    - Tell me more about Part 1 of the TOEIC test
+    - What does Part 1 of the TOEIC exam involve?
+    - Explain Part 1 to me please
+    - Can you provide information on Part 1?
+    - What is tested in Part 1 of the TOEIC?
+    - How can I practice for Part 1 of the TOEIC?
+    - Cho tôi biết thêm về Phần 1 của bài thi TOEIC
+    - Phần 1 của bài thi TOEIC kiểm tra những gì?
+    - Hãy giải thích về Phần 1 với tôi
+    - Bạn có thể cung cấp thông tin về Phần 1 không?
+    - Kỳ thi TOEIC phần 1 kiểm tra những gì?
+    - Làm thế nào để luyện tập cho Phần 1 của kỳ thi TOEIC?
+
+- intent: ask_part_1
+  examples: |
+    - What is Part 2 of the TOEIC exam?
+    - Explain Part 2 of the TOEIC test
+    - Tell me about Part 2 please
+    - Can you provide details on Part 2?
+    - How to prepare for Part 2 of the TOEIC?
+    - Where can I find practice materials for Part 2?
+    - Phần 2 của bài thi TOEIC là gì vậy?
+    - Hãy giải thích về Phần 2 của bài thi TOEIC
+    - Cho tôi biết về Phần 2 được không?
+    - Bạn có thể cung cấp thông tin chi tiết về Phần 2 được không?
+    - Làm thế nào để chuẩn bị cho Phần 2 của bài thi TOEIC?
+    - Nơi nào có thể tìm thấy tài liệu luyện tập cho Phần 2?

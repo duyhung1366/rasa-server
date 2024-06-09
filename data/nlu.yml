@@ -301,3 +301,71 @@ nlu:
     - Thông tin về Phần 7 của kỳ thi TOEIC
     - Làm thế nào để luyện tập cho Phần 7 của bài thi TOEIC?
     - Nơi nào có thể tìm thấy tài liệu luyện tập cho Phần 7?
+
+- intent: ask_personalization
+  examples: |
+    - Tôi muốn cá nhân hóa trải nghiệm học tập của mình
+    - Làm thế nào để cá nhân hóa kế hoạch học tập?
+    - Bạn có thể giúp tôi cá nhân hóa việc học tiếng Anh không?
+    - Tôi muốn tùy chỉnh lộ trình học của mình
+    - Hãy cá nhân hóa việc học của tôi
+    - Tôi muốn cá nhân hóa việc ôn thi TOEIC của mình
+    - Tôi muốn bạn giúp tôi cá nhân hóa việc học
+    - Bạn có thể chỉ tôi cách cá nhân hóa việc học được không?
+    - Làm sao để tùy chỉnh trải nghiệm học tập?
+    - Cách để cá nhân hóa việc học của tôi?
+    - Làm thế nào để truy cập vào trang cá nhân hóa?
+    - Hướng dẫn tôi đến trang web cá nhân hóa
+    - Đường dẫn đến trang web cá nhân hóa là gì?
+    - Làm sao để cá nhân hóa trên trang web?
+    - Cho tôi link đến trang cá nhân hóa
+    - Làm thế nào để tôi có thể cá nhân hóa việc học của mình?
+    - Bạn có thể cho tôi đường dẫn tới trang cá nhân hóa không?
+    - Cách truy cập vào trang cá nhân hóa?
+    - Link đến trang cá nhân hóa ở đâu?
+    - Làm thế nào để tôi có thể tùy chỉnh lộ trình học của mình?
+    - Làm sao để tôi đến trang cá nhân hóa?
+    - Hướng dẫn truy cập trang cá nhân hóa
+    - I want to personalize my learning experience.
+    - How do I personalize my study plan?
+    - Can you help me personalize my English learning?
+    - I want to customize my study path.
+    - Please personalize my learning.
+    - I want to personalize my TOEIC test preparation.
+    - I want you to help me personalize my learning.
+    - Can you show me how to personalize my learning?
+    - How can I customize my learning experience?
+    - How can I personalize my learning?
+    - How do I access the personalization page?
+    - Guide me to the personalization website.
+    - What is the link to the personalization website?
+    - How do I personalize on the website?
+    - Give me the link to the personalization page.
+    - How can I personalize my learning?
+    - Can you give me the link to the personalization page?
+    - How do I access the personalization page?
+    - Where is the link to the personalization page?
+    - How can I customize my study path?
+    - How do I get to the personalization page?
+    - Guide me to the personalization page.
+
+- intent: ask_user_statistics
+  examples: |
+    - Tôi muốn xem thống kê học tập của mình
+    - Làm thế nào để xem tiến độ học tập của tôi?
+    - Hãy cho tôi biết số liệu thống kê của tôi
+    - Tôi muốn biết mình đã hoàn thành bao nhiêu phần trăm bài tập
+    - Cho tôi xem kết quả học tập của mình
+    - Tôi cần xem tiến độ học tập của mình
+    - Thống kê kết quả học tập của tôi
+    - Xem thống kê các bài tập của tôi
+    - Tôi muốn kiểm tra kết quả của mình
+    - I want to view my learning statistics.
+    - How do I check my study progress?
+    - Show me my statistics.
+    - I want to know what percentage of the exercises I have completed.
+    - Show me my learning results.
+    - I need to see my study progress.
+    - My learning results statistics.
+    - View my exercise statistics.
+    - I want to check my results.

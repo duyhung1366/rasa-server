@@ -9,6 +9,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.types import DomainDict
 import json
+import requests
 
 class ActionExamStructure(Action):
 
@@ -120,7 +121,7 @@ class ActionAskScoreInfo(Action):
                 "8. **Retaking the Test**: If you are not satisfied with your score, you can retake the TOEIC test. Many people see score improvements with additional study and practice.\n"
                 "9. **Impact on Career**: TOEIC scores are often used by employers to assess English proficiency. A higher score can enhance your job prospects and career opportunities.\n"
                 "10. **University Requirements**: Some universities require a minimum TOEIC score for admission. Check with the specific institution for their requirements.\n",
-                f"For more study materials and practice tests, you can visit our website at [{_domain}/en/test/toeic-test-full-test/]({_domain}/test/toeic-test-full-test/). Happy studying!"
+                f"For more study materials and practice tests, you can visit our website at <a href='{_domain}/en/test/toeic-test-full-test/'>{_domain}/en/test/toeic-test-full-test/</a>. Happy studying!"
             ))
         else: 
             dispatcher.utter_message(text=(
@@ -135,7 +136,7 @@ class ActionAskScoreInfo(Action):
                 "8. **Thi lại**: Nếu bạn không hài lòng với điểm số của mình, bạn có thể thi lại TOEIC. Nhiều người thấy điểm số cải thiện sau khi học thêm và luyện tập.\n"
                 "9. **Ảnh hưởng đến sự nghiệp**: Điểm TOEIC thường được các nhà tuyển dụng sử dụng để đánh giá khả năng tiếng Anh. Điểm cao hơn có thể cải thiện cơ hội nghề nghiệp và triển vọng của bạn.\n"
                 "10. **Yêu cầu của trường đại học**: Một số trường đại học yêu cầu điểm TOEIC tối thiểu để nhập học. Kiểm tra với trường cụ thể để biết yêu cầu của họ.\n",
-                f"Để có thêm tài liệu và bài luyện thi tốt, bạn có thể truy cập trang web của chúng tôi tại [{_domain}/test/toeic-test-full-test/]({_domain}/test/toeic-test-full-test/). Chúc bạn học tốt!"
+                f"Để có thêm tài liệu và bài luyện thi tốt, bạn có thể truy cập trang web của chúng tôi tại <a href='{_domain}/test/toeic-test-full-test/'>{_domain}/test/toeic-test-full-test/</a>. Chúc bạn học tốt!"
             ))
         return []
 
@@ -152,7 +153,7 @@ class ActionPart1Info(Action):
         
         if(language == "en"):
             dispatcher.utter_message(text=(
-                f"Part 1 of the TOEIC test assesses your ability to listen in Toeic. You can practice at <a href='{_domain}/practice/toeic-practice-part-1-photos/' target='_blank'>{_domain}/practice/toeic-practice-part-1-photos/</a>."
+                f"Part 1 of the TOEIC test assesses your ability to listen in Toeic. You can practice at <a href='{_domain}/en/practice/toeic-practice-part-1-photos/' target='_blank'>{_domain}/en/practice/toeic-practice-part-1-photos/</a>."
             ))
         else: 
             dispatcher.utter_message(text=(
@@ -173,7 +174,7 @@ class ActionPart2Info(Action):
         
         if(language == "en"):
             dispatcher.utter_message(text=(
-                f"Part 2 of the TOEIC test assesses your ability to listen in Toeic. You can practice at <a href='{_domain}/practice/toeic-practice-part-2-question-response/' target='_blank'>{_domain}/practice/toeic-practice-part-2-question-response/</a>."
+                f"Part 2 of the TOEIC test assesses your ability to listen in Toeic. You can practice at <a href='{_domain}/en/practice/toeic-practice-part-2-question-response/' target='_blank'>{_domain}/en/practice/toeic-practice-part-2-question-response/</a>."
             ))
         else: 
             dispatcher.utter_message(text=(
@@ -194,7 +195,7 @@ class ActionPart3Info(Action):
         
         if(language == "en"):
             dispatcher.utter_message(text=(
-                f"Part 3 of the TOEIC test assesses your ability to listen in Toeic. You can practice at <a href='{_domain}/practice/toeic-practice-part-3-conversations/' target='_blank'>{_domain}/practice/toeic-practice-part-3-conversations/</a>."
+                f"Part 3 of the TOEIC test assesses your ability to listen in Toeic. You can practice at <a href='{_domain}/en/practice/toeic-practice-part-3-conversations/' target='_blank'>{_domain}/en/practice/toeic-practice-part-3-conversations/</a>."
             ))
         else: 
             dispatcher.utter_message(text=(
@@ -215,7 +216,7 @@ class ActionPart4Info(Action):
         
         if(language == "en"):
             dispatcher.utter_message(text=(
-                f"Part 4 of the TOEIC test assesses your ability to listen in Toeic. You can practice at <a href='{_domain}/practice/toeic-practice-part-4-short-talks/' target='_blank'>{_domain}/practice/toeic-practice-part-4-short-talks/</a>."
+                f"Part 4 of the TOEIC test assesses your ability to listen in Toeic. You can practice at <a href='{_domain}/en/practice/toeic-practice-part-4-short-talks/' target='_blank'>{_domain}/en/practice/toeic-practice-part-4-short-talks/</a>."
             ))
         else: 
             dispatcher.utter_message(text=(
@@ -236,7 +237,7 @@ class ActionPart5Info(Action):
         
         if(language == "en"):
             dispatcher.utter_message(text=(
-                f"Part 5 of the TOEIC test assesses your ability to reading in Toeic. You can practice at <a href='{_domain}/practice/toeic-practice-part-5-incomplete-sentences' target='_blank'>{_domain}/practice/toeic-practice-part-5-incomplete-sentences</a>."
+                f"Part 5 of the TOEIC test assesses your ability to reading in Toeic. You can practice at <a href='{_domain}/en/practice/toeic-practice-part-5-incomplete-sentences' target='_blank'>{_domain}/en/practice/toeic-practice-part-5-incomplete-sentences</a>."
             ))
         else: 
             dispatcher.utter_message(text=(
@@ -257,7 +258,7 @@ class ActionPart6Info(Action):
         
         if(language == "en"):
             dispatcher.utter_message(text=(
-                f"Part 6 of the TOEIC test assesses your ability to reading in Toeic. You can practice at <a href='{_domain}/practice/toeic-practice-part-6-text-completion' target='_blank'>{_domain}/practice/toeic-practice-part-6-text-completion</a>."
+                f"Part 6 of the TOEIC test assesses your ability to reading in Toeic. You can practice at <a href='{_domain}/en/practice/toeic-practice-part-6-text-completion' target='_blank'>{_domain}/en/practice/toeic-practice-part-6-text-completion</a>."
             ))
         else: 
             dispatcher.utter_message(text=(
@@ -278,10 +279,69 @@ class ActionPart7Info(Action):
         
         if(language == "en"):
             dispatcher.utter_message(text=(
-                f"Part 7 of the TOEIC test assesses your ability to reading in Toeic. You can practice at <a href='{_domain}/practice/toeic-practice-part-7-single-passages' target='_blank'>{_domain}/practice/toeic-practice-part-7-single-passages</a>."
+                f"Part 7 of the TOEIC test assesses your ability to reading in Toeic. You can practice at <a href='{_domain}/en/practice/toeic-practice-part-7-single-passages' target='_blank'>{_domain}/en/practice/toeic-practice-part-7-single-passages</a>."
             ))
         else: 
             dispatcher.utter_message(text=(
                 f"Phần 7 của bài thi TOEIC kiểm tra kỹ năng Đọc trong bài thi TOEIC. Bạn có thể luyện tập tại <a href='{_domain}/practice/toeic-practice-part-7-single-passages' target='_blank'>{_domain}/practice/toeic-practice-part-7-single-passages</a>."
             ))
+        return []
+    
+class ActionAskPersonalization(Action):
+
+    def name(self) -> Text:
+        return "action_ask_personalization"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict) -> Coroutine[Any, Any, List[Dict[str, Any]]]:
+        dataJson = tracker.sender_id
+        data = json.loads(dataJson)
+        language = data["language"]
+        _domain = data["domain"]
+        
+        if(language == "en"):
+            dispatcher.utter_message(text=(
+                f"To personalize your learning experience, please visit our personalization page at <a href='{_domain}/en/learning-path/?app=toeic' target='_blank'>{_domain}/en/learning-path/?app=toeic</a>."
+            ))
+        else: 
+            dispatcher.utter_message(text=(
+                f"Để cá nhân hóa trải nghiệm học tập của bạn, hãy truy cập vào trang web cá nhân hóa của chúng tôi tại <a href='{_domain}/learning-path/?app=toeic' target='_blank'>{_domain}/en/learning-path/?app=toeic</a>."
+            ))
+        return []
+
+class ActionAskStatistics(Action):
+
+    def name(self) -> Text:
+        return "action_ask_user_statistics"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict) -> Coroutine[Any, Any, List[Dict[str, Any]]]:
+        dataJson = tracker.sender_id
+        data = json.loads(dataJson)
+        language = data["language"]
+        _domain = data["domain"]
+        user_id = data["userId"]
+
+        response = requests.get(f"http://localhost:3001/api/analytics/statisticize-practice-learning?topicIds=660e52758d50a20990dd7419,660e52878d50a20990dd7437,65fa906cf428895a08a2046b,65fa905cf428895a08a20434,6112216a1e6e0c7cbe10585d,6112217f1e6e0c7cbe105862&userId={user_id}")
+        statisticDatas = response.json()
+
+        if(len(statisticDatas) <= 0):
+            return []
+        
+        output = ""
+        for stats in statisticDatas:
+            totalCorrect = stats.get("totalCorrect", 0)
+            totalAnswered = stats.get("totalAnswered", 0)
+            totalQuestions = stats.get("totalQuestions", 0)
+            name = stats.get("topicName")
+            overall = (totalCorrect/totalQuestions)*100
+            if(totalQuestions > 0): 
+                if(language == "vi"):
+                    output += f"<b>{name}</b>: đã làm {totalAnswered}/{totalQuestions} câu hỏi trong đó có {totalCorrect} câu làm đúng, tỉ lệ hoàn thành là : {overall}%<br/>"
+                else: 
+                    output += f"<b>{name}</b>: Answered {totalAnswered}/{totalQuestions} questions, with {totalCorrect} correct, completion rate: {overall}%.<br/>"
+        
+        if(language == "vi"):
+            output += f"xem chi tiết tại : <a href='{_domain}/my-learning/?app=toeic' target='_blank'>{_domain}/my-learning/?app=toeic</a>"
+        else: 
+            output += f"View details at: <a href='{_domain}/en/my-learning/?app=toeic' target='_blank'>{_domain}/en/my-learning/?app=toeic</a>"
+        dispatcher.utter_message(text=output)
         return []

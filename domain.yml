@@ -20,6 +20,8 @@ intents:
   - ask_part_5
   - ask_part_6
   - ask_part_7
+  - ask_personalization
+  - ask_user_statistics
 
 actions: 
   - action_send_exam
@@ -34,6 +36,8 @@ actions:
   - action_part_5_info
   - action_part_6_info
   - action_part_7_info
+  - action_ask_personalization
+  - action_ask_user_statistics
 
 responses:
   utter_greet:

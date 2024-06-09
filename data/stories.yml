@@ -62,6 +62,16 @@ stories:
   - intent: ask_part_7
   - action: action_part_7_info
 
+- story: ask personalization
+  steps:
+  - intent: ask_personalization
+  - action: action_ask_personalization
+
+- story: ask user statistics
+  steps:
+  - intent: ask_user_statistics
+  - action: action_ask_user_statistics
+
 - story: happy path
   steps:
   - intent: greet

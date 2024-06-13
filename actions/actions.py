@@ -318,8 +318,14 @@ class ActionAskStatistics(Action):
         data = json.loads(dataJson)
         language = data["language"]
         _domain = data["domain"]
-        user_id = data["userId"]
 
+        check_user_id = data.get("userId")
+        if check_user_id is None:
+            if(language == "vi"):
+                dispatcher.utter_message(text=f"Bạn cần đăng nhập để xem thống kê, đường dẫn đăng nhập : <a href='{_domain}/login/?redirect_uri=%2Ftoeic-testpro%2F&app=toeic' target='_blank'>{_domain}/login/?redirect_uri=%2Ftoeic-testpro%2F&app=toeic</a>")
+            else: 
+                dispatcher.utter_message(text=f"You need to log in to view the statistics. Login link: <a href='{_domain}/en/login/?redirect_uri=%2Ftoeic-testpro%2F&app=toeic' target='_blank'>{_domain}/en/login/?redirect_uri=%2Ftoeic-testpro%2F&app=toeic</a>")
+        user_id = data["userId"]
         response = requests.get(f"http://localhost:3001/api/analytics/statisticize-practice-learning?topicIds=660e52758d50a20990dd7419,660e52878d50a20990dd7437,65fa906cf428895a08a2046b,65fa905cf428895a08a20434,6112216a1e6e0c7cbe10585d,6112217f1e6e0c7cbe105862&userId={user_id}")
         statisticDatas = response.json()
 
